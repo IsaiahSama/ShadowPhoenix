@@ -40,13 +40,6 @@ if __name__ == "__main__":
     from time import sleep
     p = Player()
 
-    p.attack()
-    sleep(0.3)
-    p.attack()
-    sleep(0.3)
-    p.attack()
-    sleep(0.3)
-    p.attack()
-    sleep(0.3)
-    p.attack()
-    sleep(0.3)
+    for i in range(5):
+        p.attack()
+        sleep(0.3)
