@@ -2,17 +2,6 @@ import arcade
 from random import choice
 from os import listdir
 
-class Player(arcade.Sprite):
-    def __init__(self):
-        # I'm pretty sure I need something here but IDK... I'll read the docs later
-        
-        # COMPOSITION!
-        self.sounds = SoundManager()
-
-    def attack(self):
-        # Do fancy lil attack thing. And then somewhere go:
-        self.sounds.play(self, "attack")
-
 class SoundManager:
     """
     init function.
@@ -35,11 +24,3 @@ class SoundManager:
     
     def play(self, cls, sound_name:str):
         arcade.play_sound(self.load(cls, sound_name))
-
-if __name__ == "__main__":
-    from time import sleep
-    p = Player()
-
-    for i in range(5):
-        p.attack()
-        sleep(0.3)
